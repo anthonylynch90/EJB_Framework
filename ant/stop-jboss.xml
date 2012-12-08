@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Stop JBoss" default="stopServer">
+
+	<target name="stopServer">
+		<exec executable="cmd">
+			<arg value="/c"/>
+			<arg value="C:/JBOSS/jboss-4.2.3.GA/bin/shutdown.bat -S"/>
+		</exec>
+	</target>	
+	
+</project>

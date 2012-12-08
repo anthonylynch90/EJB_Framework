@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Build and Deploy assignment" default="copy-to-server">
+
+	<target name="delete-old-packages">
+		<delete>
+			<fileset dir="../deploy" includes="*.jar" />
+		</delete>
+	</target>
+
+	<target name="ejbs-jar" depends="delete-old-packages" description="creates the jar for ejb components">
+		<jar destfile="../deploy/DT354Assignment.jar" manifest="../config/MANIFEST.MF">
+			<zipfileset dir="../bin">
+				<include name="**" />
+			</zipfileset>
+			<zipfileset dir="../config" prefix="META-INF">
+				<include name="persistence.xml" />
+			</zipfileset>
+		</jar>
+	</target>
+				
+	<target name="copy-to-server" depends="ejbs-jar">
+		<copy file="../deploy/DT354Assignment.jar" tofile="C:/JBOSS/jboss-4.2.3.GA/server/default/deploy/DT354Assignment.jar" overwrite="true"/>
+	</target>
+
+</project>

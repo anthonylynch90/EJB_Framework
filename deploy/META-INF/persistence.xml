@@ -1,0 +1,8 @@
+<persistence>
+	<persistence-unit name="DT354Assignment">
+		<jta-data-source>java:/DefaultDS</jta-data-source>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+</persistence>

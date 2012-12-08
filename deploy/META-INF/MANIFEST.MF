@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.0
+Created-By: Neil and Alan
+Class-Path: jsf-api.jar jsf-impl.jar el-api-1.0.jar el-impl-1.0.jar js
+ f-facelets.jar BASTAWSClient.jar BASTATestEJBDeploy.jar
+

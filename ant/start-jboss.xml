@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Start JBoss" default="startServer">
+
+	<target name="startServer">
+		<exec executable="cmd">
+			<arg value="/c"/>
+			<arg value="C:/JBOSS/jboss-4.2.3.GA/bin/run.bat"/>
+		</exec>
+	</target>	
+	
+</project>
